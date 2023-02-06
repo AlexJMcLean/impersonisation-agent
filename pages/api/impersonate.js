@@ -22,6 +22,6 @@ export default withAuth(async (req, res) => {
       console.log(error);
     });
 
-  console.log(response.data);
+  console.log(response);
   res.status(200).json(response);
 });
