@@ -16,12 +16,12 @@ export default withAuth(async (req, res) => {
     Authorization: `Bearer ${token}`,
   };
 
-  const response = await axios.post(
-    "https://api.clerk.dev/v1/actor_tokens",
-    body,
-    config
-  );
+  const response = await axios
+    .post("https://api.clerk.dev/v1/actor_tokens", body, config)
+    .catch((error) => {
+      console.log(error);
+    });
 
-  console.log(response);
+  console.log(response.data);
   res.status(200).json(response);
 });
