@@ -1,5 +1,5 @@
 import { withAuth } from "@clerk/nextjs/api";
-import axios from "Axios";
+import axios from "axios";
 
 export default withAuth(async (req, res) => {
   const { userId, getToken } = req.auth;
