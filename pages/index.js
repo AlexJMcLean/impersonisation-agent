@@ -1,5 +1,6 @@
 import { SignOutButton } from "@clerk/nextjs";
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
@@ -13,10 +14,10 @@ export default function Home() {
       <main className={styles.main}>
         <SignOutButton />
         <div className={styles.grid}>
-          <a href="/posts" className={styles.card}>
+          <Link href="/posts" className={styles.card}>
             <h2>Visit posts page &rarr;</h2>
             <p>Get started by visiting the posts page</p>
-          </a>
+          </Link>
         </div>
       </main>
     </div>
